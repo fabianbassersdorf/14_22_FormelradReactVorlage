@@ -12,7 +12,12 @@ export default function Formelrad() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setValues(values => ({...values, u: values.i * values.r}));
+        setValues(values => ({
+            ...values,
+            u: values.i * values.r,
+            i: values.u / values.r,
+            p: values.u * values.i
+        }));
     }
 
     return (
